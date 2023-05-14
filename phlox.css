@@ -1,0 +1,91 @@
+@media (color) {
+  :any-link {
+    color: inherit;
+  }
+
+  ::selection { 
+    background: thistle;
+    color: rebeccapurple;
+  }
+
+  .luna { 
+    background-color: thistle;
+    background-image: conic-gradient(orchid, thistle, orchid, thistle);
+    color: rebeccapurple;
+  }
+  
+  .melt { 
+    background-color: blueviolet;
+    background-image: conic-gradient(blueviolet, purple, darkviolet);
+    color: lavender;
+  }
+  
+  .jugo { 
+    background-color: darkviolet;
+    background-image: conic-gradient(darkviolet, blueviolet, purple);
+    color: lavender;
+  }
+  
+  .nara { 
+    background-color: orangered;
+    background-image: conic-gradient(orangered, salmon, coral);
+    color: indigo;
+  }
+}
+
+:link:not(:hover) {
+  text-decoration-style: dotted;
+}
+
+:focus {
+  box-shadow: 0 0 0 1ch;
+  outline-style: dotted;
+  outline-width: 1ch;
+}
+
+:focus-within {
+  box-shadow: 1em 0 3em 0;
+  border-style: outset;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: max(3ch, 4vmax + 5vmin);
+  line-height: 1.618;
+}
+
+body {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+a:nth-child(odd) { font-weight: bold }
+a { display: inline-flex }
+p { font-size: 1.236rem }
+h1 { font-size: 1.618rem; font-weight: unset }
+footer:not(:focus-within) { font-size: 0 }
+
+article {
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.pulse {
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 1em dotted;
+  contain: layout;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  .pulse  {
+    writing-mode: sideways-rl;
+  }
+}
+ 
